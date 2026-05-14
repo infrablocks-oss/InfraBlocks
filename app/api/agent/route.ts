@@ -114,7 +114,7 @@ export async function POST(request: NextRequest) {
     const messages = [
       {
         role: "system",
-        content: `You are Rex, an expert cloud infrastructure consultant and DevOps engineer. You help users with cloud infrastructure questions, architecture design, and deployment guidance.
+        content: `You are an expert cloud infrastructure consultant and DevOps engineer. You help users with cloud infrastructure questions, architecture design, and deployment guidance.
 
 CURRENT CANVAS STATE: ${canvasContext || 'No canvas context available'}
 
@@ -719,7 +719,7 @@ function generateInfrastructureComponents(type: string, complexity: string): any
           storage_type: "gp2",
           db_name: "mydatabase",
           username: "admin",
-          password: "password123",
+          password: "changeme123",
           backup_retention_period: 7,
           backup_window: "03:00-04:00",
           maintenance_window: "sun:04:00-sun:05:00"

@@ -51,8 +51,9 @@ export function AgentChat() {
   
   // Quick demo questions
   const demoQuestions = [
+    "Can you create a simple web app architecture?",
     "What's RDS?",
-    "Why this architecture?", 
+    "Why this architecture?",
     "How much will this cost?",
     "How do I make it secure?",
     "What if I have 100k users?",
@@ -73,12 +74,15 @@ export function AgentChat() {
     "Can I use Lambda?"
   ]
   
-  // Get 3 random questions
+  // Fixed question that's always shown
+  const fixedQuestion = "Can you create a simple web app architecture?"
+
+  // Get 2 random questions (excluding the fixed one)
   const getRandomQuestions = () => {
-    const shuffled = [...demoQuestions].sort(() => 0.5 - Math.random())
-    return shuffled.slice(0, 3)
+    const shuffled = [...demoQuestions.filter(q => q !== fixedQuestion)].sort(() => 0.5 - Math.random())
+    return shuffled.slice(0, 2)
   }
-  
+
   const [quickQuestions, setQuickQuestions] = useState<string[]>(getRandomQuestions())
 
   // Clean AI response text - remove unwanted formatting
@@ -669,21 +673,30 @@ export function AgentChat() {
           {/* Input area */}
           <div className="flex-shrink-0 p-2 border-t bg-white">
             {/* Quick Questions */}
-            {quickQuestions.length > 0 && (
-              <div className="mb-2 flex gap-2">
-                {quickQuestions.map((question, index) => (
-                  <Button
-                    key={index}
-                    variant="outline"
-                    size="sm"
-                    onClick={() => handleQuickQuestion(question)}
-                    className="text-xs px-2 py-1 h-6 bg-blue-50 hover:bg-blue-100 border-blue-200 text-blue-700"
-                  >
-                    {question}
-                  </Button>
-                ))}
-              </div>
-            )}
+            <div className="mb-2 flex gap-2 overflow-x-auto pb-1">
+              {/* Fixed question - always shown */}
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handleQuickQuestion(fixedQuestion)}
+                className="text-xs px-2 py-1 h-6 bg-green-50 hover:bg-green-100 border-green-200 text-green-700 font-medium"
+              >
+                {fixedQuestion}
+              </Button>
+
+              {/* Random questions */}
+              {quickQuestions.map((question, index) => (
+                <Button
+                  key={index}
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleQuickQuestion(question)}
+                  className="text-xs px-2 py-1 h-6 bg-blue-50 hover:bg-blue-100 border-blue-200 text-blue-700"
+                >
+                  {question}
+                </Button>
+              ))}
+            </div>
             
             <div className="flex gap-1 items-end">
               <Textarea

@@ -19,3 +19,5 @@ export async function GET(
     return NextResponse.json({ error: 'Config not found' }, { status: 404 })
   }
 }
+
+
