@@ -6,9 +6,11 @@
 
 # InfraBlocks
 
-InfraBlocks is a modern drag-and-drop infrastructure design platform that lets you visually create, configure, and deploy cloud resources across AWS, GCP, and Azure. With an AI agent called Rex, automated Terraform generation, and real-time deployment capabilities, it simplifies cloud infrastructure management for everyone by removing technical barriers and making powerful tools accessible to all. Whether you’re a beginner exploring cloud services or an experienced developer seeking faster workflows, InfraBlocks provides an intuitive, visual way to build and launch infrastructure without needing deep certifications or complex configuration steps.
+HackGT 12 Best Developer Tool winner.
 
-![InfraBlocks Demo](https://via.placeholder.com/800x400/0ea5e9/ffffff?text=InfraBlocks+Visual+Infrastructure+Designer)
+InfraBlocks is a drag-and-drop infrastructure design prototype for visually creating cloud architectures across AWS, GCP, and Azure. It pairs a React Flow canvas with an AI assistant called Rex and Terraform generation so a user can sketch infrastructure and turn it into code.
+
+This was built as a hackathon project, not a maintained cloud platform. The repo is kept public as a snapshot of the winning prototype and the technical direction behind it.
 
 ## ✨ Key Features
 
@@ -59,8 +61,8 @@ InfraBlocks is a modern drag-and-drop infrastructure design platform that lets y
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/CodeBlocks.git
-cd CodeBlocks
+git clone https://github.com/infrablocks-oss/InfraBlocks.git
+cd InfraBlocks
 
 # Install dependencies
 npm install
@@ -264,10 +266,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🆘 Support
 
-- 📧 Email: support@infrablocks.dev
-- 💬 Discord: [Join our community](https://discord.gg/infrablocks)
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/CodeBlocks/issues)
-- 📖 Docs: [Documentation](https://docs.infrablocks.dev)
+- 🐛 Issues: [GitHub Issues](https://github.com/infrablocks-oss/InfraBlocks/issues)
 
 ## 🚀 Roadmap
 
@@ -290,6 +289,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ by the InfraBlocks team**
+**Built by the InfraBlocks team**
 
 *Transform your cloud infrastructure with visual design and AI assistance*
